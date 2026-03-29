@@ -53,7 +53,7 @@
     <div class="account-content">
         <div class="login-wrapper">
             <div class="login-content">
-                <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{ route('login.store') }}">
                     @csrf
                     <div class="login-userset">
                         <div class="login-logo logo-normal">
@@ -108,7 +108,7 @@
                             <button type="submit" class="btn btn-login text-uppercase">Login</button>
                         </div>
                         <div class="signinform">
-                            <h4>New on our platform?<a href="{{ url('register-2') }}" class="hover-a"> Create an
+                            <h4>New on our platform?<a href="{{ route('register') }}" class="hover-a"> Create an
                                     account</a>
                             </h4>
                         </div>

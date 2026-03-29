@@ -17,7 +17,7 @@ class ProfileController extends Controller
     public function edit(Request $request): View
     {
         return view('profile.edit', [
-            'user' => $request->user(),
+            'user' => (object) session('api_user'),
         ]);
     }
 
@@ -26,13 +26,12 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
-
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
-        }
-
-        $request->user()->save();
+        $userData = session('api_user');
+        $validated = $request->validated();
+        
+        // Merge the validated data into the session user data
+        $updatedUser = array_merge($userData, $validated);
+        $request->session()->put('api_user', $updatedUser);
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
@@ -46,12 +45,7 @@ class ProfileController extends Controller
             'password' => ['required', 'current_password'],
         ]);
 
-        $user = $request->user();
-
-        Auth::logout();
-
-        $user->delete();
-
+        $request->session()->forget(['api_user', 'api_token']);
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 

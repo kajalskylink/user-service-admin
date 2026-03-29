@@ -271,8 +271,8 @@
                             class="img-fluid">
                     </span>
                     <span class="user-detail">
-                        <span class="user-name">{{ auth()->user()->name }}</span>
-                        <span class="user-role">{{ auth()->user()->type }}</span>
+{{--                        <span class="user-name">{{ auth()->user()->name }}</span>--}}
+{{--                        <span class="user-role">{{ auth()->user()->type }}</span>--}}
                     </span>
                 </span>
             </a>
@@ -283,8 +283,8 @@
                                 alt="">
                             <span class="status online"></span></span>
                         <div class="profilesets">
-                            <h6>{{ auth()->user()->name }}</h6>
-                            <h5>{{ auth()->user()->type }}</h5>
+{{--                            <h6>{{ auth()->user()->name }}</h6>--}}
+{{--                            <h5>{{ auth()->user()->type }}</h5>--}}
                         </div>
                     </div>
                     <hr class="m-0">

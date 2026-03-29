@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,20 +15,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/', function () {
-        return redirect()->route('dashboard');
-    });
-
-    Route::get('/dashboard', function () {
-        return view('pages.admin.dashboard.index');
-    })->middleware(['verified'])->name('dashboard');
-
-    Route::controller(ProfileController::class)->group(function () {
-        Route::get('/profile', 'edit')->name('profile.edit');
-        Route::patch('/profile', 'update')->name('profile.update');
-        Route::delete('/profile', 'destroy')->name('profile.destroy');
-    });
+Route::get('/', function () {
+    return redirect()->route('dashboard');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/dashboard', function () {
+    if (!session('api_user')) {
+        return redirect()->route('login');
+    }
+    return view('pages.admin.dashboard.index');
+})->name('dashboard');
+
+Route::controller(ProfileController::class)->group(function () {
+    Route::get('/profile', 'edit')->name('profile.edit');
+    Route::patch('/profile', 'update')->name('profile.update');
+    Route::delete('/profile', 'destroy')->name('profile.destroy');
+});
+
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/register', 'createRegistration')->name('register');
+    Route::post('/register', 'register');
+    Route::get('/login', 'create')->name('login');
+    Route::post('/login', 'store')->name('login.store');
+    Route::post('/logout', 'logout')->name('logout');
+});
+
