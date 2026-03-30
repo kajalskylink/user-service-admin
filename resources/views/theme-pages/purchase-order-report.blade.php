@@ -1,6 +1,6 @@
 <?php $page = 'purchase-order-report'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             @component('components.breadcrumb')
@@ -294,4 +294,4 @@
             <!-- /product list -->
         </div>
     </div>
-@endsection
+</x-main-layout>

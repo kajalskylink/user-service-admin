@@ -1,6 +1,6 @@
 <?php $page = 'pos'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper pos-pg-wrapper ms-0">
         <div class="content pos-design p-0">
             <div class="btn-row d-sm-flex align-items-center">
@@ -1346,4 +1346,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

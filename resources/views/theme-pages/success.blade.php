@@ -1,6 +1,6 @@
 <?php $page = 'success'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="account-content">
         <div class="login-wrapper register-wrap bg-img">
             <div class="login-content">
@@ -28,4 +28,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

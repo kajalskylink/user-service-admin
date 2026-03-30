@@ -2,24 +2,9 @@
 <div class="sidebar horizontal-sidebar">
     <div id="sidebar-menu-3" class="sidebar-menu">
         <ul class="nav">
-            <li class="submenu">
-                <a href="{{ url('index') }}"
-                    class="{{ Request::is('index', '/', 'sales-dashboard', 'video-call', 'audio-call', 'call-history', 'chat', 'calendar', 'email', 'todo', 'notes', 'file-manager', 'file-archived', 'file-document', 'file-favourites', 'file-manager-seleted', 'file-recent', 'file-shared') ? 'active subdrop' : '' }}"><i
-                        data-feather="grid"></i><span> Main Menu</span>
-                    <span class="menu-arrow"></span></a>
-                <ul>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                            class="{{ Request::is('index', '/', 'sales-dashboard') ? 'active subdrop' : '' }}"><span>Dashboard</span>
-                            <span class="menu-arrow"></span></a>
-                        <ul>
-                            <li><a href="{{ url('index') }}" class="{{ Request::is('index') ? 'active' : '' }}">Admin
-                                    Dashboard</a></li>
-                            <li><a href="{{ url('sales-dashboard') }}"
-                                    class="{{ Request::is('sales-dashboard') ? 'active' : '' }}">Sales Dashboard</a>
-                            </li>
-                        </ul>
-                    </li>
+            <li class="{{ Request::is('dashboard', '/') ? 'active' : '' }}">
+                <a href="{{ url('dashboard') }}" class="{{ Request::is('dashboard', '/') ? 'active' : '' }}"><i data-feather="grid"></i><span> Dashboard</span></a>
+            </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
                             class="{{ Request::is('video-call', 'audio-call', 'call-history', 'chat', 'calendar', 'email', 'todo', 'notes', 'file-manager', 'file-archived', 'file-document', 'file-favourites', 'file-manager-seleted', 'file-recent', 'file-shared', 'file-manager-deleted') ? 'active subdrop' : '' }} "><span>Application</span><span
@@ -165,10 +150,14 @@
             </li>
             <li class="submenu">
                 <a href="javascript:void(0);"
-                    class="{{ Request::is('customers','suppliers','store-list','warehouse','roles-permissions','permissions','delete-account','ui-alerts','ui-accordion','ui-avatar','ui-badges','ui-borders','ui-buttons','ui-buttons-group','ui-breadcrumb','ui-cards','ui-carousel','ui-colors','ui-dropdowns','ui-grid','ui-images','ui-lightbox','ui-modals','ui-media','ui-offcanvas','ui-pagination','ui-popovers','ui-progress','ui-placeholders','ui-rangeslider','ui-spinner','ui-sweetalerts','ui-nav-tabs','ui-toasts','ui-tooltips','ui-typography','ui-video','ui-ribbon','ui-clipboard','ui-drag-drop','ui-rating','ui-text-editor','ui-counter','ui-scrollbar','ui-stickynote','ui-timeline','chart-apex','chart-c3','chart-js','chart-morris','chart-flot','chart-peity','icon-fontawesome','icon-feather','icon-ionic','icon-material','icon-pe7','icon-simpleline','icon-themify','icon-weather','icon-typicon','icon-flag','form-wizard','form-select2','form-validation','form-floating-labels','form-vertical','form-horizontal','form-basic-inputs','form-checkbox-radios','form-input-groups','form-grid-gutters','form-select','form-mask','form-fileupload','form-horizontal','form-vertical','form-floating-labels','form-validation','form-select2','form-wizard','tables-basic','data-tables')? 'active subdrop': '' }}"><img
+                    class="{{ Request::is('users*','customers','suppliers','store-list','warehouse','roles-permissions','permissions','delete-account','ui-alerts','ui-accordion','ui-avatar','ui-badges','ui-borders','ui-buttons','ui-buttons-group','ui-breadcrumb','ui-cards','ui-carousel','ui-colors','ui-dropdowns','ui-grid','ui-images','ui-lightbox','ui-modals','ui-media','ui-offcanvas','ui-pagination','ui-popovers','ui-progress','ui-placeholders','ui-rangeslider','ui-spinner','ui-sweetalerts','ui-nav-tabs','ui-toasts','ui-tooltips','ui-typography','ui-video','ui-ribbon','ui-clipboard','ui-drag-drop','ui-rating','ui-text-editor','ui-counter','ui-scrollbar','ui-stickynote','ui-timeline','chart-apex','chart-c3','chart-js','chart-morris','chart-flot','chart-peity','icon-fontawesome','icon-feather','icon-ionic','icon-material','icon-pe7','icon-simpleline','icon-themify','icon-weather','icon-typicon','icon-flag','form-wizard','form-select2','form-validation','form-floating-labels','form-vertical','form-horizontal','form-basic-inputs','form-checkbox-radios','form-input-groups','form-grid-gutters','form-select','form-mask','form-fileupload','form-horizontal','form-vertical','form-floating-labels','form-validation','form-select2','form-wizard','tables-basic','data-tables')? 'active subdrop': '' }}"><img
                         src="{{ URL::asset('/assets/img/icons/users1.svg') }}" alt="img"><span>User
                         Management</span> <span class="menu-arrow"></span></a>
                 <ul>
+                    <li class="{{ Request::is('users*') ? 'active' : '' }}">
+                        <a href="{{ route('users.index') }}" class="{{ Request::is('users*') ? 'active' : '' }}">
+                            <i data-feather="users"></i><span>Users</span></a>
+                    </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
                             class="{{ Request::is('customers', 'suppliers', 'store-list', 'warehouse') ? 'active subdrop' : '' }}"><span>People</span><span

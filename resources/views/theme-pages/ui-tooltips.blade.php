@@ -1,6 +1,6 @@
 <?php $page = 'ui-tooltips'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <!-- Page Wrapper -->
     <div class="page-wrapper cardhead">
         <div class="content ">
@@ -215,4 +215,4 @@
         </div>
     </div>
     <!-- /Page Wrapper -->
-@endsection
+</x-main-layout>

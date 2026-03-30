@@ -1,6 +1,6 @@
 <?php $page = 'coming-soon'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="comming-soon-pg w-100">
         <div class="coming-soon-box">
             <div class="pos-logo">
@@ -34,4 +34,4 @@
             </ul>
         </div>
     </div>
-@endsection
+</x-main-layout>

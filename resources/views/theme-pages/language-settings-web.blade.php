@@ -1,6 +1,6 @@
 <?php $page = 'language-settings-web'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content settings-content">
             <div class="page-header settings-pg-header">
@@ -364,4 +364,4 @@
         </div>
     </div>
     <!-- Edit Language -->
-@endsection
+</x-main-layout>

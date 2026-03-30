@@ -1,6 +1,6 @@
 <?php $page = 'data-tables'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content container-fluid">
 
@@ -291,4 +291,4 @@
 
         </div>
     </div>
-@endsection
+</x-main-layout>

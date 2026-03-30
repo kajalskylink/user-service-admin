@@ -1,6 +1,6 @@
 <?php $page = 'ui-text-editor'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper cardhead">
         <div class="content ">
 
@@ -34,4 +34,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

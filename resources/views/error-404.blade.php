@@ -1,6 +1,6 @@
 <?php $page = 'error-404'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
 <div class="error-box">
     <div class="error-img">
         <img src="{{ URL::asset('/assets/img/authentication/error-404.png')}}" class="img-fluid" alt="">
@@ -10,4 +10,4 @@
         doesn’t exist or has been moved</p>
     <a href="{{url('index')}}" class="btn btn-primary">Back to Dashboard</a>
 </div>
-@endsection
+</x-main-layout>

@@ -1,6 +1,6 @@
 <?php $page = 'file-archived'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper notes-page-wrapper file-manager">
         <div class="content">
 
@@ -1088,4 +1088,4 @@
         </div>
         <!-- /Content -->
     </div>
-@endsection
+</x-main-layout>

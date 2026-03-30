@@ -80,18 +80,9 @@
             <div class="tab-content tab-content-four pt-2">
                 <ul class="tab-pane {{ Request::is('index', '/', 'sales-dashboard', 'video-call', 'audio-call', 'call-history', 'chat', 'calendar', 'email', 'todo', 'notes', 'file-manager', 'file-archived', 'file-document', 'file-favourites', 'file-manager-seleted', 'file-recent', 'file-shared', 'file-manager-deleted') ? 'active' : '' }}"
                     id="home" aria-labelledby="home-tab">
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                            class="{{ Request::is('index', '/', 'sales-dashboard') ? 'active subdrop' : '' }}"><span>Dashboard</span>
-                            <span class="menu-arrow"></span></a>
-                        <ul>
-                            <li><a href="{{ url('index') }}"
-                                    class="{{ Request::is('index', '/') ? 'active' : '' }}">Admin Dashboard</a></li>
-                            <li><a href="{{ url('sales-dashboard') }}"
-                                    class="{{ Request::is('sales-dashboard') ? 'active' : '' }}">Sales Dashboard</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <li class="{{ Request::is('dashboard', '/') ? 'active' : '' }}">
+                        <a href="{{ url('dashboard') }}" class="{{ Request::is('dashboard', '/') ? 'active' : '' }}">
+                            <i data-feather="grid"></i><span>Dashboard</span></a></li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
                             class="{{ Request::is('chat', 'file-manager', 'notes', 'todo', 'email', 'calendar', 'call-history', 'audio-call', 'video-call', 'file-archived', 'file-document', 'file-favourites', 'file-manager-seleted', 'file-recent', 'file-shared', 'file-manager-deleted') ? 'active subdrop' : '' }}"><span>Application</span><span
@@ -305,10 +296,12 @@
                             class="{{ Request::is('profit-and-loss') ? 'active' : '' }}"><span>Profit &
                                 Loss</span></a></li>
                 </ul>
-                <ul class="tab-pane {{ Request::is('tables-basic','data-tables','form-wizard','form-select2','form-validation','form-floating-labels','form-vertical','form-horizontal','form-basic-inputs','form-checkbox-radios','form-input-groups','form-grid-gutters','form-select','form-mask','form-fileupload','icon-fontawesome','icon-feather','icon-ionic','icon-material','icon-pe7','icon-simpleline','icon-themify','icon-weather','icon-typicon','icon-flag','chart-apex','chart-c3','chart-js','chart-morris','chart-flot','chart-peity','roles-permissions','permissions','delete-account','users','ui-alerts','ui-accordion','ui-avatar','ui-badges','ui-borders','ui-buttons','ui-buttons-group','ui-breadcrumb','ui-cards','ui-carousel','ui-colors','ui-dropdowns','ui-grid','ui-images','ui-lightbox','ui-modals','ui-media','ui-offcanvas','ui-pagination','ui-popovers','ui-progress','ui-placeholders','ui-rangeslider','ui-spinner','ui-sweetalerts','ui-nav-tabs','ui-toasts','ui-tooltips','ui-typography','ui-video','ui-ribbon','ui-clipboard','ui-drag-drop','ui-rangeslider','ui-rating','ui-text-editor','ui-counter','ui-scrollbar','ui-stickynote','ui-timeline')? 'active': '' }}"
+                <ul class="tab-pane {{ Request::is('tables-basic','data-tables','form-wizard','form-select2','form-validation','form-floating-labels','form-vertical','form-horizontal','form-basic-inputs','form-checkbox-radios','form-input-groups','form-grid-gutters','form-select','form-mask','form-fileupload','icon-fontawesome','icon-feather','icon-ionic','icon-material','icon-pe7','icon-simpleline','icon-themify','icon-weather','icon-typicon','icon-flag','chart-apex','chart-c3','chart-js','chart-morris','chart-flot','chart-peity','roles-permissions','permissions','delete-account','users*','ui-alerts','ui-accordion','ui-avatar','ui-badges','ui-borders','ui-buttons','ui-buttons-group','ui-breadcrumb','ui-cards','ui-carousel','ui-colors','ui-dropdowns','ui-grid','ui-images','ui-lightbox','ui-modals','ui-media','ui-offcanvas','ui-pagination','ui-popovers','ui-progress','ui-placeholders','ui-rangeslider','ui-spinner','ui-sweetalerts','ui-nav-tabs','ui-toasts','ui-tooltips','ui-typography','ui-video','ui-ribbon','ui-clipboard','ui-drag-drop','ui-rangeslider','ui-rating','ui-text-editor','ui-counter','ui-scrollbar','ui-stickynote','ui-timeline')? 'active': '' }}"
                     id="permission" aria-labelledby="set-tab4">
-                    <li><a href="{{ url('users') }}"
-                            class="{{ Request::is('users') ? 'active' : '' }}"><span>Users</span></a></li>
+                    <li class="{{ Request::is('users*') ? 'active' : '' }}">
+                        <a href="{{ route('users.index') }}" class="{{ Request::is('users*') ? 'active' : '' }}">
+                            <i data-feather="users"></i><span>Users</span></a>
+                    </li>
                     <li><a href="{{ url('roles-permissions') }}"
                             class="{{ Request::is('roles-permissions', 'permissions') ? 'active' : '' }}"><span>Roles
                                 &

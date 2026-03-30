@@ -1,6 +1,6 @@
 <?php $page = 'ui-sweetalerts'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper cardhead">
         <div class="content ">
 
@@ -115,4 +115,4 @@
 
         </div>
     </div>
-@endsection
+</x-main-layout>

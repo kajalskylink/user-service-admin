@@ -1,6 +1,6 @@
 <?php $page = 'leaves-admin'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             @component('components.breadcrumb')
@@ -510,4 +510,4 @@
 
         </div>
     </div>
-@endsection
+</x-main-layout>

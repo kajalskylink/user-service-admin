@@ -1,6 +1,6 @@
 <?php $page = 'expense-report'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             <div class="page-header justify-content-between">
@@ -213,4 +213,4 @@
             <!-- /product list -->
         </div>
     </div>
-@endsection
+</x-main-layout>

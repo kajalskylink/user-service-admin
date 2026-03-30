@@ -1,6 +1,6 @@
 <?php $page = 'error-500'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
 <div class="error-box">
     <div class="error-img">
         <img src="{{ URL::asset('/build/img/authentication/error-500.png')}}" class="img-fluid" alt="">
@@ -10,4 +10,4 @@
         Please try again at a  later stage</p>
     <a href="{{url('index')}}" class="btn btn-primary">Back to Dashboard</a>
 </div>
-@endsection
+</x-main-layout>

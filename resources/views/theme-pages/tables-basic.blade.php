@@ -1,6 +1,6 @@
 <?php $page = 'tables-basic'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper cardhead">
         <div class="content container-fluid">
 
@@ -1530,4 +1530,4 @@
             <!-- /Table Head -->
         </div>
     </div>
-@endsection
+</x-main-layout>

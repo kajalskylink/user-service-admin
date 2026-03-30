@@ -1,6 +1,6 @@
 <?php $page = 'success-3'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="account-content">
         <div class="login-wrapper login-new">
             <div class="login-content user-login">
@@ -31,4 +31,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

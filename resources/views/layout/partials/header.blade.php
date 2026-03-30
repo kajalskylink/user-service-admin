@@ -2,19 +2,16 @@
 <div class="header">
 
     <!-- Logo -->
-    <div class="header-left active">
-        <a href="{{ url('/') }}" class="logo logo-normal">
-            <img src="{{ URL::asset('/assets/img/logo-new.png') }}" style="width: 44%;" alt="">
+    <div class="header-left active" style="display: flex; align-items: center; justify-content: left; padding: 0 15px;">
+        <a href="{{ url('/') }}" class="logo logo-normal" style="display: flex; align-items: center;">
+            <img src="{{ URL::asset('/assets/img/logo-new.png') }}" alt="" style="max-height: 50px; width: auto; transition: all 0.2s;">
         </a>
-        <a href="{{ url('/') }}" class="logo logo-white">
-            <img src="{{ URL::asset('/assets/img/logo-white.png') }}" alt="">
-        </a>
-        <a href="{{ url('/') }}" class="logo-small">
-            <img src="{{ URL::asset('/assets/img/logo-small.png') }}" alt="">
-        </a>
-        <a id="toggle_btn" href="javascript:void(0);">
-            <i data-feather="chevrons-left" class="feather-16"></i>
-        </a>
+{{--        <a href="{{ url('/') }}" class="logo-small" style="display: flex; align-items: center;">--}}
+{{--            <img src="{{ URL::asset('/assets/img/logo-small.png') }}" alt="" style="max-height: 30px; width: auto;">--}}
+{{--        </a>--}}
+{{--        <a id="toggle_btn" href="javascript:void(0);" style="margin-left: auto;">--}}
+{{--            <i data-feather="chevrons-left" class="feather-16"></i>--}}
+{{--        </a>--}}
     </div>
     <!-- /Logo -->
 
@@ -309,14 +306,20 @@
     <div class="dropdown mobile-user-menu">
         <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
             aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-        <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="{{ url('profile') }}">My Profile</a>
-            <a class="dropdown-item" href="{{ url('general-settings') }}">Settings</a>
-            <form action="{{ route('logout') }}" method="POST">
+        <div class="dropdown-menu dropdown-menu-end menu-drop-user">
+            <a class="dropdown-item d-flex align-items-center" href="{{ url('profile') }}">
+                <i class="me-2 feather-16" data-feather="user"></i> My Profile
+            </a>
+            <a class="dropdown-item d-flex align-items-center" href="{{ url('general-settings') }}">
+                <i class="me-2 feather-16" data-feather="settings"></i> Settings
+            </a>
+            <hr class="m-0 my-1">
+            <form action="{{ route('logout') }}" method="POST" class="m-0">
                 @csrf
-                <button type="submit" class="dropdown-item logout"><img
-                        src="{{ URL::asset('/assets/img/icons/log-out.svg') }}" class="me-2"
-                        alt="img">Logout</button>
+                <button type="submit" class="dropdown-item logout d-flex align-items-center w-100 border-0 bg-transparent py-2">
+                    <img src="{{ URL::asset('/assets/img/icons/log-out.svg') }}" class="me-2" style="width:16px;" alt="img">
+                    Logout
+                </button>
             </form>
         </div>
     </div>

@@ -32514,3 +32514,53 @@ label span {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Professional Action Column Styles - Definitive v4 (11px) */
+.action-table-data-new {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 8px !important;
+}
+
+.action-icon-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 2px !important;
+    border: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.action-icon-btn:hover, 
+.action-icon-btn:focus, 
+.action-icon-btn:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    opacity: 0.6 !important;
+    transform: scale(1.15) !important;
+}
+
+.action-icon-btn i, 
+.action-icon-btn svg {
+    width: 11px !important;
+    height: 11px !important;
+    stroke-width: 3px !important; /* Thicker stroke for extreme small size visibility */
+}
+
+/* Remove Row Hover Background for cleaner look if requested */
+.aura-datatable tbody tr:hover {
+    background-color: transparent !important;
+}
+
+.action-table-data-new td, 
+.action-table-data-new {
+    border: none !important;
+}

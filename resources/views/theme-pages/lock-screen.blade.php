@@ -1,6 +1,6 @@
 <?php $page = 'lock-screen'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="login-wrapper">
         <div class="container">
             <img class="img-fluid logo-dark mb-5" src="{{ URL::asset('/assets/img/logo.png') }}" alt="Logo">
@@ -45,4 +45,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

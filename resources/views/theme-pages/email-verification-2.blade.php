@@ -1,6 +1,6 @@
 <?php $page = 'email-verification-2'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="account-content">
         <div class="login-wrapper">
             <div class="login-content">
@@ -35,4 +35,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

@@ -1,6 +1,6 @@
 <?php $page = 'sales-dashboard'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             <div class="welcome d-lg-flex align-items-center justify-content-between">
@@ -385,4 +385,4 @@
             </li>
         </ul>
     </div>
-@endsection
+</x-main-layout>

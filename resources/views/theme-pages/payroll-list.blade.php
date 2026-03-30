@@ -1,6 +1,6 @@
 <?php $page = 'payroll-list'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             @component('components.breadcrumb')
@@ -748,4 +748,4 @@
         </div>
     </div>
     <!-- Edit Payroll -->
-@endsection
+</x-main-layout>

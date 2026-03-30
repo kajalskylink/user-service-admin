@@ -1,6 +1,6 @@
 <?php $page = 'file-manager-deleted'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper notes-page-wrapper file-manager">
         <div class="content">
             <div class="page-header page-add-notes d-flex align-items-center justify-content-between">
@@ -385,4 +385,4 @@
         </div>
         <!-- /Content -->
     </div>
-@endsection
+</x-main-layout>

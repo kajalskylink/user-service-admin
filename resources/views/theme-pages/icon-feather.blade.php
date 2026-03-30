@@ -1,6 +1,6 @@
 <?php $page = 'icon-feather'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper cardhead">
         <div class="content container-fluid">
 
@@ -438,4 +438,4 @@
 
         </div>
     </div>
-@endsection
+</x-main-layout>

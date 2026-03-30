@@ -136,3 +136,6 @@
 
  <!-- Main CSS -->
  <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
+
+ <!-- Custom Modern CSS -->
+ <link rel="stylesheet" href="{{ url('assets/css/custom-modern.css') }}">

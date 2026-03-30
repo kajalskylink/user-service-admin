@@ -1,6 +1,6 @@
 <?php $page = 'ui-typography'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <!-- Page Wrapper -->
     <div class="page-wrapper">
         <div class="content">
@@ -681,4 +681,4 @@
         </div>
     </div>
     <!-- /Page Wrapper -->
-@endsection
+</x-main-layout>

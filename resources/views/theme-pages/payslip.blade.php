@@ -1,6 +1,6 @@
 <?php $page = 'payslip'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content mb-3">
             <div class="pay-slip-box" id="pay-slip">
@@ -134,4 +134,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

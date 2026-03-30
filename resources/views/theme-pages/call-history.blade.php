@@ -1,6 +1,6 @@
 <?php $page = 'category-list'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             <div class="page-header">
@@ -467,4 +467,4 @@
             <!-- /product list -->
         </div>
     </div>
-@endsection
+</x-main-layout>

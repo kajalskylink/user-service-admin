@@ -1,6 +1,6 @@
 <?php $page = 'ui-offcanvas'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             <div class="page-header">
@@ -296,4 +296,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

@@ -1,6 +1,6 @@
 <?php $page = 'add-product'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             <div class="page-header d-flex justify-content-end">
@@ -262,4 +262,4 @@
             <!-- /product list -->
         </div>
     </div>
-@endsection
+</x-main-layout>

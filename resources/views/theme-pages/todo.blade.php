@@ -1,6 +1,6 @@
 <?php $page = 'todo'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper notes-page-wrapper">
         <div class="content">
 
@@ -902,4 +902,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

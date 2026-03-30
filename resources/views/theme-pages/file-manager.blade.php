@@ -1,6 +1,6 @@
 <?php $page = 'file-manager'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper notes-page-wrapper file-manager">
         <div class="content">
 
@@ -1300,4 +1300,4 @@
         <!-- /Content -->
 
     </div>
-@endsection
+</x-main-layout>

@@ -6,17 +6,18 @@
                 <li class="submenu-open">
                     <h6 class="submenu-hdr">Main</h6>
                     <ul>
-                        <li class="submenu">
-                            <a href="javascript:void(0);"
-                                class="{{ Request::is('dashboard', '/') ? 'active subdrop' : '' }}"><i
-                                    data-feather="grid"></i><span>Dashboard</span><span class="menu-arrow"></span></a>
-                            <ul>
-                                <li><a href="{{ url('dashboard') }}"
-                                        class="{{ Request::is('dashboard', '/') ? 'active' : '' }}">Admin Dashboard</a>
-                                </li>
-                            </ul>
+                        <li class="{{ Request::is('dashboard', '/') ? 'active' : '' }}">
+                            <a href="{{ url('dashboard') }}" class="{{ Request::is('dashboard', '/') ? 'active' : '' }}">
+                                <i data-feather="grid"></i><span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="{{ Request::is('users*') ? 'active' : '' }}">
+                            <a href="{{ route('users.index') }}" class="{{ Request::is('users*') ? 'active' : '' }}">
+                                <i data-feather="users"></i><span>Users</span>
+                            </a>
                         </li>
                     </ul>
+                </li>
             </ul>
         </div>
     </div>

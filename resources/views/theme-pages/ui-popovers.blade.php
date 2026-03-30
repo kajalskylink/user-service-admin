@@ -1,6 +1,6 @@
 <?php $page = 'ui-popovers'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <!-- Pae Wrapper -->
     <div class="page-wrapper">
         <div class="content">
@@ -291,4 +291,4 @@
         </div>
     </div>
     <!-- /Page Wrapper -->
-@endsection
+</x-main-layout>

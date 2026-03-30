@@ -1,6 +1,6 @@
 <?php $page = 'varriant-attributes'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             <div class="page-header d-flex justify-content-end">
@@ -535,4 +535,4 @@
             </li>
         </ul>
     </div>
-@endsection
+</x-main-layout>

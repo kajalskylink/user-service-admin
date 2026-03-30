@@ -1,6 +1,6 @@
 <?php $page = 'sms-gateway'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content settings-content">
             <div class="page-header settings-pg-header">
@@ -100,4 +100,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-main-layout>

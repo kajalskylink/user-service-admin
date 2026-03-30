@@ -1,6 +1,6 @@
 <?php $page = 'under-maintenance'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="error-box">
         <div class="error-img">
             <img src="{{ URL::asset('/assets/img/authentication/under-maintenance.png') }}" class="img-fluid" alt="">
@@ -10,4 +10,4 @@
             Will get back soon!</p>
         <a href="{{ url('index') }}" class="btn btn-primary">Back to Dashboard</a>
     </div>
-@endsection
+</x-main-layout>

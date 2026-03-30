@@ -1,6 +1,6 @@
 <?php $page = 'expense-category'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-main-layout>
+
     <div class="page-wrapper">
         <div class="content">
             @component('components.breadcrumb')
@@ -385,4 +385,4 @@
         </div>
     </div>
     <!-- /Add Expense Category-->
-@endsection
+</x-main-layout>
